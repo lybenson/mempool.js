@@ -7,7 +7,7 @@ import {
 
 export const useMempool = (api: AxiosInstance): MempoolInstance => {
   const getMempool = async () => {
-    const { data } = await api.get<Mempool[]>(`/mempool`);
+    const { data } = await api.get<Mempool>(`/mempool`);
     return data;
   };
 
@@ -27,3 +27,4 @@ export const useMempool = (api: AxiosInstance): MempoolInstance => {
     getMempoolRecent,
   };
 };
+

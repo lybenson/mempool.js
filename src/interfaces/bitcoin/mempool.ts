@@ -6,7 +6,7 @@ export interface Mempool {
 }
 
 export interface MempoolInstance {
-  getMempool: () => Promise<Mempool[]>;
+  getMempool: () => Promise<Mempool>;
   getMempoolTxids: () => Promise<string[]>;
   getMempoolRecent: () => Promise<MempoolRecent[]>;
 }
@@ -17,3 +17,4 @@ export interface MempoolRecent {
   vsize: number;
   value: number;
 }
+
